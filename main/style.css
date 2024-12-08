@@ -1,0 +1,15 @@
+
+
+
+
+
+body {
+    margin: 0;
+    max-width: 1600px;
+    justify-self: center;
+}
+
+.main-wrapper {
+    width: 100%;
+    background-color: pink;
+}
