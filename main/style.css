@@ -6,10 +6,45 @@
 body {
     margin: 0;
     max-width: 1600px;
+    width: 100%;
     justify-self: center;
+    font-family: "proxima-nova", sans-serif;
 }
 
 .main-wrapper {
-    width: 100%;
     background-color: pink;
+}
+
+
+
+
+/*Header*/
+
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#header-logo {
+    width: 250px;
+}
+
+
+.global-nav {
+    display: flex;
+    column-gap: 32px;
+}
+
+
+/*Header Button*/
+
+.search-btn {
+    display: flex;
+    background-color: lightblue;
+}
+
+#search-icon {
+    fill: #00454e;
 }
