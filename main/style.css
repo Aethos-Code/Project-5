@@ -2,14 +2,55 @@
 
 
 
-
+/*Source*/
 body {
     margin: 0;
+    /*max-width: 1300px;*/
     max-width: 1600px;
     width: 100%;
     justify-self: center;
     font-family: "proxima-nova", sans-serif;
 }
+
+
+
+
+h1 {
+    color: #00454e;
+    font-size: 4rem;
+    font-weight: 700;
+    font-style: italic;
+    margin: 0;
+}
+
+h2 {
+    color: #00454e;
+    font-size: 3rem;
+    margin: 0;
+}
+
+h3 {
+    color: #00454e;
+    font-size: 2rem;
+    margin: 0 0 9px 0;
+}
+
+h4 {
+    color: #00454e;
+    font-size: 1.45rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+p {
+    color: #00454e;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0 0 20px;
+}
+
+
+
 
 .main-wrapper {
     background-color: pink;
@@ -21,9 +62,15 @@ body {
 /*Header*/
 
 
+.navigation a {
+    text-decoration: none;
+}
+
+
 .header-content {
     display: flex;
     justify-content: space-between;
+    text-decoration: none;
 }
 
 
@@ -35,6 +82,12 @@ body {
 .global-nav {
     display: flex;
     column-gap: 32px;
+    align-items: center;
+}
+
+.global-nav a {
+    color: #00454e;
+    font-size: 12px;
 }
 
 
@@ -42,9 +95,164 @@ body {
 
 .search-btn {
     display: flex;
-    background-color: lightblue;
+    background-color: #00454e;
+    padding: 0px 24px 0px 24px;
+    color: white;
+    box-sizing: border-box;
+    height: 40px;
+    align-items: center;
+    column-gap: 10px;
+    border-radius: 5px;
 }
 
 #search-icon {
-    fill: #00454e;
+    fill: white;
 }
+
+.btn-text {
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+
+/*Main Page*/
+
+
+.hero-section {
+    position: relative;
+    border-left: 50px solid;
+    border-right: 50px solid;
+    border-color: #DBEDED;
+    background-color: #DBEDED;
+}
+
+.veil {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    z-index: 50;
+}
+
+.veil-wrapper {
+    padding: 250px 40% 0px 150px;
+    align-items: center;
+}
+
+
+.veil-content {
+    z-index: 100;
+    color: white;
+    
+}
+
+.veil-content h1 {
+    font-style: italic;
+    font-size: 4rem;
+    margin: 0;
+    color: white;
+
+}
+
+.veil-content h4 {
+    margin: 0;
+    color: white;
+}
+
+
+#bgVideo {
+    display: block;
+    width: 100%;
+}
+
+
+
+.main-content {
+    width: auto;
+    height: 100vh;
+    background-color: lightblue;
+    border-left: 100px solid;
+    border-color: #DBEDED;
+    
+}
+
+/*Top Section*/
+
+
+.top-section {
+    padding: 100px 100px 100px 100px;
+    background-color: bisque;
+    display: flex;
+    column-gap: 50px;
+}
+
+.left-container {
+    flex: 1 1 0;
+    width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.l-con-btns {
+    display: flex;
+    column-gap: 10px;
+}
+
+button {
+    text-decoration: none;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.cta {
+    background-color: #00454e;
+    color: white;
+}
+
+.sub {
+    background-color: white;
+    color: #F1917A;
+    box-shadow:0px 0px 0px 2px #F1917A inset;
+}
+
+
+.right-container {
+    flex: 1 1 0;
+    width: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#introVideo {
+     width: 100%;
+}
+
+
+
+/*Middle Section*/
+
+.middle-section {
+    background-color: pink;
+    padding: 100px 100px 100px 100px;
+    display: flex;
+    column-gap: 50px;
+}
+
+.link {
+    color: rgb(0, 69, 78);
+    font-weight: 700;
+    border-bottom-style: dotted;
+    border-bottom-width: 2px;
+    text-decoration: none;
+}
+
+
+
+/*Bottom Section*/
+
