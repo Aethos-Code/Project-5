@@ -2,15 +2,55 @@
 
 
 
-
+/*Source*/
 body {
     margin: 0;
-    max-width: 1300px;
-    /*max-width: 1600px;*/
+    /*max-width: 1300px;*/
+    max-width: 1600px;
     width: 100%;
     justify-self: center;
     font-family: "proxima-nova", sans-serif;
 }
+
+
+
+
+h1 {
+    color: #00454e;
+    font-size: 4rem;
+    font-weight: 700;
+    font-style: italic;
+    margin: 0;
+}
+
+h2 {
+    color: #00454e;
+    font-size: 3rem;
+    margin: 0;
+}
+
+h3 {
+    color: #00454e;
+    font-size: 2rem;
+    margin: 0 0 9px 0;
+}
+
+h4 {
+    color: #00454e;
+    font-size: 1.45rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+p {
+    color: #00454e;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0 0 20px;
+}
+
+
+
 
 .main-wrapper {
     background-color: pink;
@@ -80,7 +120,7 @@ body {
 /*Main Page*/
 
 
-.top-section {
+.hero-section {
     position: relative;
     border-left: 50px solid;
     border-right: 50px solid;
@@ -112,10 +152,13 @@ body {
     font-style: italic;
     font-size: 4rem;
     margin: 0;
+    color: white;
+
 }
 
-.veil-content h2 {
+.veil-content h4 {
     margin: 0;
+    color: white;
 }
 
 
@@ -135,8 +178,81 @@ body {
     
 }
 
-.middle-section {
-    padding: 50px 100px 0px 100px;
+/*Top Section*/
+
+
+.top-section {
+    padding: 100px 100px 100px 100px;
     background-color: bisque;
+    display: flex;
+    column-gap: 50px;
 }
+
+.left-container {
+    flex: 1 1 0;
+    width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.l-con-btns {
+    display: flex;
+    column-gap: 10px;
+}
+
+button {
+    text-decoration: none;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.cta {
+    background-color: #00454e;
+    color: white;
+}
+
+.sub {
+    background-color: white;
+    color: #F1917A;
+    box-shadow:0px 0px 0px 2px #F1917A inset;
+}
+
+
+.right-container {
+    flex: 1 1 0;
+    width: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#introVideo {
+     width: 100%;
+}
+
+
+
+/*Middle Section*/
+
+.middle-section {
+    background-color: pink;
+    padding: 100px 100px 100px 100px;
+    display: flex;
+    column-gap: 50px;
+}
+
+.link {
+    color: rgb(0, 69, 78);
+    font-weight: 700;
+    border-bottom-style: dotted;
+    border-bottom-width: 2px;
+    text-decoration: none;
+}
+
+
+
+/*Bottom Section*/
 
