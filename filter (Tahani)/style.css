@@ -1,0 +1,96 @@
+header{
+    text-align: center; 
+    margin-bottom: 20px;
+}
+header h1{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+header p{
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+header button{
+    background-color: #004E58;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+body{
+    min-height: 100vh;
+    background: #f5f5f5;
+    display: flex; /*aktiverer flexbox*/
+    flex-direction: column; /*lader elementerne stables vertikalt*/
+    justify-content: center; /*centrerer indholdet horisontalt*/
+    align-items: center; /*centrer indholdet vertikalt*/
+    margin: 0; /*fjerner maeginer*/
+    padding: 0; /*fjern padding*/
+}
+.container{
+    max-width: 1350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /*stabler elementer i containeren*/
+    align-items: center; /*centrer indholdet horisontalt*/
+    gap: 20px;
+    padding: 20px;
+}
+.filter_buttons{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+button{
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #DBEDED;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+button.active{
+    background: #004e58;
+    color: #fff;
+}
+.filterable_cards{
+    display: flex;
+    justify-content: center;
+    gap: 20px; /*giver mellemrum mellem kortene*/
+    flex-wrap: wrap; /*sørger for at kortene bryges til næste side*/
+}
+.card{
+    flex-grow: 1;
+    flex-basis: 300px;
+    background-color: #DBEDED;
+    padding: 3px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+.card.hide{
+    display: none;
+}
+.card img{
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.card_body{
+    padding: 15px 20px 20px;
+}
+.card_title{
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+}
+.card_text{
+    font-size: 18px;
+    color: #333;
+}
