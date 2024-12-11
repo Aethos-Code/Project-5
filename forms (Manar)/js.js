@@ -2,9 +2,14 @@ const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 
+
+// Array for input elements
+const inputs = [username, email];
+
+
 form.addEventListener('submit', e => {
     e.preventDefault();
-    validateInputs(); // Kald funktionen til validering
+    validateInputs(); // Kalder funktionen til validering
 });
 
 const setError = (element, message) => {
@@ -28,30 +33,40 @@ const isValidEmail = email => {
     return re.test(String(email).toLowerCase());
 };
 
+//bruger en loop til at validere hvert input i arrayet
 const validateInputs = () => {
-    const usernameValue = username.value.trim();
-    const emailValue = email.value.trim();
+    inputs.forEach(input => {
+        const inputValue = input.value.trim();
 
-    // Brugernavn validation
-    if(usernameValue === '') {
-        setError(username, 'Brugernavn er påkrævet');
-    } else {
-        setSuccess(username);
-    }
-
-    // Email validation
-    if(emailValue === '') {
-        setError(email, 'Email er påkrævet');
-    } else if (!isValidEmail(emailValue)) {
-        setError(email, 'Angiv en gyldig email adresse');
-    } else {
-        setSuccess(email);
-    }
+        if(input === username) {
+            // Her valideres brugernavn 
+            if(inputValue === '') {
+                setError(input, 'Brugernavn er påkrævet');
+            } else {
+                setSuccess(input);
+            }
+        } else if(input === email) {
+            // Her valideres Email
+            if(inputValue === '') {
+                setError(input, 'Email er påkrævet');
+            } else if (!isValidEmail(inputValue)) {
+                setError(input, 'Angiv en gyldig email adresse');
+            } else {
+                setSuccess(input);
+            }
+        }
+    });
 };
 
 
 
-// javascript for menu
+
+
+
+
+
+
+// Javascript for menu
 const dropdowns = document.querySelectorAll('.dropdown');
 
 //en loop gennem alle dropdowns 
