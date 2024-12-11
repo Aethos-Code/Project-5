@@ -1,7 +1,7 @@
 const filterButtons = document.querySelectorAll(".filter_buttons button");
 const filterableCards = document.querySelectorAll(".filterable_cards .card");
 
-const filterCards = (e) =>{
+const filterCards = (e) => {
     document.querySelector(".active").classList.remove("active");
     e.target.classList.add("active");
     console.log(e.target);
