@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fablab</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/filter.css">
     <link rel="stylesheet" href="https://use.typekit.net/unp6niv.css">
 </head>
 <body>
@@ -110,8 +111,25 @@
             </div>
 
             <div class="bottom-section"> 
+                <div class="filter_container">
+                    <!---filter buttons-->
+                    <div class="filter_buttons">
+                        <button class="active" data-name="alle">Alle</button>
+                        <button data-name="3D-print">3D-print</button>
+                        <button data-name="Laserskæring">Laserskæring</button>
+                        <button data-name="Creative">Creative Works</button>
+                        <button data-name="Design">Design Works</button>
+                    </div>
+            
+                    <!---image cards-->
+                    <div id="cards-container" class="filterable_cards">
+                        
+            
+                    </div>
+                </div>
             </div> 
         </div>
     </div>
+    <script src="js/filter.js"></script>
 </body>
 </html>

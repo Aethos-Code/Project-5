@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="filter.css">
 </head>
 <body>
     <header>
         <h1>Vælg dit kursus</h1>
     </header>
 
-    <div class="container">
+    <div class="filter_container">
         <!---filter buttons-->
         <div class="filter_buttons">
             <button class="active" data-name="alle">Alle</button>
@@ -22,118 +22,8 @@
         </div>
 
         <!---image cards-->
-        <div class="filterable_cards">
-            <div class="card" data-name="3D-print">
-                <img src="img/3D-print.png" alt="3D-print" />
-                <div class="card_body">
-                    <h6 class="card_title">3D-print    05/12/24</h6>
-                    <p class="card_text">Oplev en ny verden med 3D-print, hvor du får muligheden fra at gå til ide til dit helt eget fysisk produkt</p>
-                </div>
-            </div>
+        <div id="cards-container" class="filterable_cards">
             
-            <div class="card" data-name="3D-print">
-                <img src="img/3D-print2.png" alt="3D-print" />
-                <div class="card_body">
-                    <h6 class="card_title">3D-print     27/12/24</h6>
-                    <p class="card_text">Mød op d.27/12 og bring alle dine gode ideer med, så vi kan bringe dem til virkelighed!</p>
-                </div>
-            </div>
-
-            <div class="card" data-name="3D-print">
-                <img src="img/3d-print3.png" alt="3D-print" />
-                <div class="card_body">
-                    <h6 class="card_title">3D-print     15/12/24</h6>
-                    <p class="card_text">Kun du kan sætte dine egne grænse for din fantasi!</p>
-                </div>
-            </div>
-
-            <div class="card" data-name="Laserskæring">
-                <img src="img/Laser.png" alt="Laserskæring" />
-                <div class="card_body">
-                    <h6 class="card_title">Laserskæring     07/12/24</h6>
-                    <p class="card_text">Start dit første projekt med en nøglering ud træ - det er ret delulu</p>
-                </div>
-            </div>
-
-            <div class="card" data-name="Laserskæring">
-                <img src="img/laser2.png" alt="Laserskæring" />
-                <div class="card_body">
-                    <h6 class="card_title">Laserskæring     12/12/24</h6>
-                    <p class="card_text">Mød op til noget laserskæring i træ med en kop kaf' i hånden, hvorfor ik'?</p>
-                </div>
-            </div>
-
-            <div class="card" data-name="Laserskæring">
-                <img src="img/laser3.png" alt="Laserskæring" />
-                <div class="card_body">
-                    <h6 class="card_title">Laserskæring     24/12/24</h6>
-                    <p class="card_text">Brænd lidt krut af med laser</p>
-                </div>
-            </div>
-
-            <div class="card" data-name="Laserskæring">
-                <img src="img/laser4.png" alt="Laserskæring" />
-                <div class="card_body">
-                    <h6 class="card_title">Laserskæring     16/12/24</h6>
-                    <p class="card_text">Få endnu en fordel i livet og mød op til laserskæring, hvor du selv designer din fantasi fra bunden</p>
-                </div>
-            </div>
-
-            <div class="card" data-name="Creative">
-                <img src="img/creative.png" alt="Creative" />
-                <div class="card_body">
-                    <h6 class="card_title">Creative Work     20/12/24</h6>
-                    <p class="card_text">Tag en ven under armen og sving din kreativitet i gang</p>
-                </div>
-            </div>
-
-            <div class="card" data-name="Creative">
-                <img src="img/creative2.png" alt="Creative" />
-                <div class="card_body">
-                    <h6 class="card_title">Creative Work     21/12/24</h6>
-                    <p class="card_text">Hvorfor sidde alene med din kreativitet, når du kan sidde med hele holdet bror</p>
-                </div>
-            </div>
-
-            <div class="card" data-name="Creative">
-                <img src="img/creative3.png" alt="Creative" />
-                <div class="card_body">
-                    <h6 class="card_title">Creative Work     23/12/24</h6>
-                    <p class="card_text">Vi tilbyder dig en åben verden - ingen grænser!</p>
-                </div>
-            </div>
-
-            <div class="card" data-name="Design">
-                <img src="img/design.png" alt="Design" />
-                <div class="card_body">
-                    <h6 class="card_title">Design Work     24/12/24</h6>
-                    <p class="card_text">Er du lidt mere til design, så kom over til os d.24/12. Bring energien og humøret til en god stemning over dit eget ubegrænset design!</p>
-                </div>
-            </div>
-
-            <div class="card" data-name="Design">
-                <img src="img/design2.png" alt="Design" />
-                <div class="card_body">
-                    <h6 class="card_title">Design Work     17/12/24</h6>
-                    <p class="card_text">Du kan udarbejde lige, hvad der lyster dig. Tag og medbring din ide og gør det til vision</p>
-                </div>
-            </div>
-
-            <div class="card" data-name="Design">
-                <img src="img/design3.png" alt="Design" />
-                <div class="card_body">
-                    <h6 class="card_title">Design Work     06/12/24</h6>
-                    <p class="card_text">Design behøver skam ikke kun være fysisk i hænderne. Udnyt muligheden med vores resourcer</p>
-                </div>
-            </div>
-
-            <div class="card" data-name="Design">
-                <img src="img/design4.png" alt="Design" />
-                <div class="card_body">
-                    <h6 class="card_title">Design Work     08/12/24</h6>
-                    <p class="card_text">Vi tilbyder dig alt vi har for at kunne opstarte dit design enten fysisk eller digitalt</p>
-                </div>
-            </div>
 
         </div>
     </div>

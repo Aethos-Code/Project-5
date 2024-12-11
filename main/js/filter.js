@@ -102,7 +102,7 @@ const cards = [
   ];
 
 
-const container = document.getElementById('cards-container');
+const filterContainer = document.getElementById('cards-container');
 
 cards.forEach(card => {
     const cardElement = document.createElement('div');
@@ -118,7 +118,7 @@ cards.forEach(card => {
       </div>
     `;
     
-    container.appendChild(cardElement);
+    filterContainer.appendChild(cardElement);
   });
 
 
