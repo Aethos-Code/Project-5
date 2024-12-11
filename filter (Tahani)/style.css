@@ -63,6 +63,8 @@ button.active{
     justify-content: center;
     gap: 20px; /*giver mellemrum mellem kortene*/
     flex-wrap: wrap; /*sørger for at kortene bryges til næste side*/
+    min-height: 600px; /*fast minimumshøjde for at undgå hop*/
+    transition: height 0.3s ease; /*glat overgang, hvis højde justeres*/
 }
 .card{
     flex-grow: 1;
