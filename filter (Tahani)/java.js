@@ -1,6 +1,8 @@
-const filterButtons = document.querySelectorAll(".filter_buttons button");
+const filterButtons = document.querySelectorAll(".filter_buttons button"); /* punktum foran gør det til class*/
 
-const cards = [
+
+/*array med al min data*/
+const cards = [ 
     {
       name: "3D-print",
       image: "img/3D-print.png",
@@ -107,7 +109,7 @@ const container = document.getElementById('cards-container');
 cards.forEach(card => {
     const cardElement = document.createElement('div');
     cardElement.classList.add('card');
-    cardElement.setAttribute('data-name', card.name); // Set the data-name attribute for filtering
+    cardElement.setAttribute('data-name', card.name); /* Sætter data-name attributer til filtering*/
     
     cardElement.innerHTML = `
       <img src="${card.image}" alt="${card.name}" />
@@ -141,16 +143,3 @@ const filterCards = (e) => {
 
 filterButtons.forEach(button => button.addEventListener("click", filterCards));
 
-// find alle img-elementer inde i .card div'er
-const images = document.querySelectorAll('.card img');
-
-// opret et tomt array til at gemme src-attributterne
-const imageSources = [];
-
-// gennemgå alle fundne billeder og tilføj deres src til arrayet
-images.forEach((images) => {
-    imageSources.push(images.src);
-});
-
-// log imagesources array til konsollen for at verficere indholdet
-console.log(imageSources);
