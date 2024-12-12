@@ -1,0 +1,65 @@
+
+.faq-overskrift { 
+  color: #004E58;
+  }
+
+  .faq-spørgsmål {
+  font-size: 16px;
+  color:  #004E58;
+  }
+
+.faq-container {
+  padding: 20px;
+}
+
+.faq-liste {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.faq-element {
+  background-color: #E4F1F0;
+  border: 1px solid #ddd;
+  padding: 5px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.faq-element:hover {
+  background-color: #CCE7E7;
+}
+
+.faq-svar {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #004E58;
+  display: none; 
+  padding-left: 10px;
+  line-height: 1.6;
+}
+
+.faq-element.aktiv .faq-svar {
+  display: block; 
+}
+
+.faq-section {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.faq-wrapper {
+  padding: 15px;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 300px;
+}
+  

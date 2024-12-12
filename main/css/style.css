@@ -10,9 +10,8 @@ body {
     width: 100%;
     justify-self: center;
     font-family: "proxima-nova", sans-serif;
+    height: auto;
 }
-
-
 
 
 h1 {
@@ -38,7 +37,7 @@ h3 {
 h4 {
     color: #00454e;
     font-size: 1.45rem;
-    font-weight: 600;
+    font-weight: bold;
     margin: 0;
 }
 
@@ -85,6 +84,10 @@ p {
 #header-logo {
     width: 250px;
     align-self: center;
+}
+
+.header-content svg {
+    display: none;
 }
 
 
@@ -172,23 +175,26 @@ p {
     height: 100%;
     position: absolute;
     z-index: 50;
+    display: flex;
+
 }
 
 .veil-wrapper {
-    padding: 250px 40% 0px 150px;
+    width: 100%;
+    height: 100%;
+    display: flex;
     align-items: center;
+    padding: 0 150px 0 150px;
 }
 
 
 .veil-content {
-    z-index: 100;
     color: white;
     
 }
 
 .veil-content h1 {
     font-style: italic;
-    font-size: 4rem;
     margin: 0;
     color: white;
 
@@ -215,6 +221,15 @@ p {
     
 }
 
+
+
+
+
+
+
+
+
+
 /*Top Section*/
 
 
@@ -226,7 +241,6 @@ p {
 
 .left-container {
     flex: 1 1 0;
-    width: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -260,7 +274,6 @@ button {
 
 .right-container {
     flex: 1 1 0;
-    width: 0;
     display: flex;
     justify-content: flex-end;
 }
@@ -333,9 +346,176 @@ button {
 }
 
 #calender {
-    width: 75%;
+    height: 400px;
+    width: 400px;
+       
 }
 
 
 /*Bottom Section*/
 
+
+.bottom-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+/*Responsiveness*/
+
+@media (max-width: 1600px) {
+    body {
+        max-width: 1300px;
+    }
+  }
+
+@media (max-width: 1300px) {
+   .nav-section {
+        display: none;
+}
+    .header-content svg {
+        display: block;
+        fill: #00454e;
+}
+
+}
+
+@media (max-width: 1000px) {
+    #bgVideo {
+        display: none;
+    }
+
+
+    .veil {
+        display: flex;
+        width: 100%;
+        height: auto;
+        position: static;
+
+    }
+
+    .hero-section {
+        border-left-width: 100px;
+    }
+
+    .veil-wrapper {
+        padding: 20px 100px 20px 100px;
+    }
+
+    .veil-content h1 {
+        color: #00454e;
+    }   
+    
+    .veil-content h4 {
+        color: #00454e;
+    }
+
+    .top-section {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .middle-section {
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: center;
+    }
+ }
+ 
+
+ @media (max-width: 800px) {
+    #a-logo img {
+        width: 200px;
+    }
+    .header-content {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-wrapper {
+        padding: 30px;
+        margin: 0;
+    }
+
+    .breadcrumbs {
+        padding: 0 200px 5px 200px;
+    }
+    
+
+    
+
+    .hero-section {
+        border-left-width: 100px;
+        padding: 0 100px 5px 100px;
+    }
+
+    .veil-wrapper {
+        padding: 0px;
+    }
+
+
+    
+ }
+
+
+
+
+ @media (max-width: 500px) {
+    body {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    
+    .breadcrumbs {
+        padding: 0 30px 5px 30px;
+    }
+    
+
+    
+
+    .hero-section {
+        border-left-width: 15px;
+        padding: 0 15px 5px 15px;
+    }
+
+    .veil-wrapper {
+        padding: 0px;
+    }
+
+
+
+    
+
+    .main-content {
+        padding: 0;
+        width: 100%;
+        border-left: 15px solid;
+        border-color: #DBEDED;
+    }
+
+    .top-section {
+        padding: 30px 15px;
+    }
+
+    .middle-section {
+        padding: 30px 15px;
+    }
+
+    .bottom-section {
+        padding: 30px 15px;
+    }
+
+    .right-container {
+        display: none;
+    }
+ }

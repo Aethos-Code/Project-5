@@ -7,7 +7,6 @@
     flex-direction: column; /*stabler elementer i containeren*/
     align-items: center; /*centrer indholdet horisontalt*/
     gap: 20px;
-    padding: 20px;
 }
 
 .filter_buttons{
@@ -35,6 +34,8 @@ button.active{
 
     justify-content: center;
     gap: 20px; /*giver mellemrum mellem kortene*/
+    height: 1000px;
+    overflow: auto;
 }
 .card{
     display: flex;
@@ -71,7 +72,7 @@ button.active{
 }
 .card_title{
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 00;
     color: #333;
 }
 
@@ -96,3 +97,15 @@ button.active{
     text-decoration: none;
     color: #004e58;
 }
+
+
+
+@media (max-width: 1000px) {
+    .filter_buttons {
+        justify-content: center;
+    }
+    .filterable_cards {
+        grid-template-columns: 250px;
+        height: 500px;
+    }
+ }

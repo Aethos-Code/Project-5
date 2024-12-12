@@ -76,7 +76,7 @@ const cards = [
       image: "img/design.png",
       title: "Design Work",
       date: "24/12/24",
-      description: "Er du lidt mere til design, så kom over til os d.24/12. Bring energien og humøret til en god stemning over dit eget ubegrænset design!"
+      description: "Er du lidt mere til design. Bring energien og humøret til en god stemning over dit eget design!"
     },
     {
       name: "Design",
