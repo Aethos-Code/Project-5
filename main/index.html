@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/filter.css">
     <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/forms.css">
     <link rel="stylesheet" href="https://use.typekit.net/unp6niv.css">
 </head>
 <body>
     <script defer src="js/carousel.js"></script>
     <script src="js/faq.js" defer></script>
+    <script defer src="js/forms.js"></script>
     <div class="main-wrapper">
         <header class="navigation">
             <div class="header-wrapper">
@@ -143,9 +145,55 @@
                         <div id="faq-liste" class="faq-liste"></div>
                     </div>
                 </div>
+            </div>
 
-                
-            </div> 
+
+            <div class="modal-overlay" id="modal-overlay">
+                <div class="modal">
+                    <button class="close-button" id="close-button">&times;</button>
+                    <div class="forms-container">
+                        <form id="form">
+                            <h1>Booking</h1>
+                            <div class="input-control">
+                                <label for="username">Navn</label>
+                                <input id="username" name="username" type="text">
+                                <div class="error"></div>
+                            </div>
+                            <div class="input-control">
+                                <label for="email">Email</label>
+                                <input id="email" name="username" type="text">
+                                <div class="error"></div>
+                            </div>
+                            <!--dropdown menu-->
+                                <div class="dropdown">
+                                    <div class="select"> 
+                                        <span class="selected">Uddannelse</span>
+                                        <div class="caret"></div>
+                                    </div>
+                                    <ul class="menu">
+                                        <li class="active">Automationsteknolog</li>
+                                        <li>Bioanalytikker</li>
+                                        <li>Bygningskonstruktør</li>
+                                        <li>Datamatiker</li>
+                                        <li>E-Handel</li>
+                                        <li>Energiteknolog</li>
+                                        <li>Finans</li>
+                                        <li>IT-sikkerhed</li>
+                                        <li>Lærer</li>
+                                        <li>Multimediedesigner</li>
+                                    </ul> 
+                                </div> 
+                            <button type="submit">Godkend</button>    
+                        </form>
+                    </div>               
+                </div>
+            </div>
+
+
+
+
+            
+
         </div>
     </div>
     <script src="js/filter.js"></script>
