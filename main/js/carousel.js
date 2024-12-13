@@ -6,19 +6,19 @@ let startX;
 let containerX;
 
 const items = [
-    {name: 'Mads', education: 'Multimediedesigner', source: 'assets/items/car1.png'},
-    {name: 'Gertrud', education: 'Multimediedesigner', source: 'assets/items/car2.png'},
-    {name: 'Jack', education: 'Multimediedesigner', source: 'assets/items/car3.png'},
-    {name: 'Nikoline', education: 'Multimediedesigner', source: 'assets/items/car4.png'},
-    {name: 'Nicolai', education: 'Multimediedesigner', source: 'assets/items/car5.png'},
-    {name: 'Manar', education: 'Multimediedesigner', source: 'assets/items/car6.png'},
-    {name: 'Nikoline', education: 'Multimediedesigner', source: 'assets/items/car7.png'},
-    {name: 'Tahani', education: 'Multimediedesigner', source: 'assets/items/car8.png'},
-    {name: 'Lasse', education: 'Multimediedesigner', source: 'assets/items/car9.png'},
-    {name: 'Emil', education: 'Multimediedesigner', source: 'assets/items/car8.png'},
-    {name: 'Trine', education: 'Multimediedesigner', source: 'assets/items/car9.png'},
-    {name: 'Cassandra', education: 'Multimediedesigner', source: 'assets/items/car8.png'},
-    {name: 'Emilie', education: 'Multimediedesigner', source: 'assets/items/car9.png'}
+    {name: 'Mads', education: 'Multimediedesigner', source: 'assets/items/car1.webp'},
+    {name: 'Gertrud', education: 'Multimediedesigner', source: 'assets/items/car2.webp'},
+    {name: 'Jack', education: 'Multimediedesigner', source: 'assets/items/car3.webp'},
+    {name: 'Nikoline', education: 'Multimediedesigner', source: 'assets/items/car4.webp'},
+    {name: 'Nicolai', education: 'Multimediedesigner', source: 'assets/items/car5.webp'},
+    {name: 'Manar', education: 'Multimediedesigner', source: 'assets/items/car6.webp'},
+    {name: 'Nikoline', education: 'Multimediedesigner', source: 'assets/items/car7.webp'},
+    {name: 'Tahani', education: 'Multimediedesigner', source: 'assets/items/car8.webp'},
+    {name: 'Lasse', education: 'Multimediedesigner', source: 'assets/items/car9.webp'},
+    {name: 'Emil', education: 'Multimediedesigner', source: 'assets/items/car8.webp'},
+    {name: 'Trine', education: 'Multimediedesigner', source: 'assets/items/car9.webp'},
+    {name: 'Cassandra', education: 'Multimediedesigner', source: 'assets/items/car8.webp'},
+    {name: 'Emilie', education: 'Multimediedesigner', source: 'assets/items/car9.webp'}
 ];
 
 function creation() {
@@ -76,16 +76,16 @@ function stopDragging() {
 carousel.addEventListener("mousemove", (e) => {
     if (!dragging) return;
 
-    const dx = e.pageX - startX;
-    const newLeft = containerX + dx;
-    container.style.left = `${newLeft}px`;
+    const offset = e.pageX - startX;
+    const newX = containerX + offset;
+    container.style.left = `${newX}px`;
 
-    boundItems();
+    boundary();
 });
 
-const test = document.querySelectorAll('.item');
+const hover = document.querySelectorAll('.item');
 
-test.forEach((item) => {
+hover.forEach((item) => {
     item.addEventListener('mouseover', () => {
         item.lastElementChild.style.filter = "brightness(50%)";
         item.firstElementChild.style.opacity = '100%';
@@ -99,21 +99,21 @@ test.forEach((item) => {
 
 
 
-let boundItems = () => {
+let boundary = () => {
     let outer = carousel.getBoundingClientRect();
     let inner = container.getBoundingClientRect();
     const maxLeft = 0;
     const maxRight = outer.width - inner.width;
     
     
-    const currentLeft = parseInt(container.style.left) || 0;
+    const currentX = parseInt(container.style.left) || 0;
 
 
-    if (currentLeft > maxLeft) {
+    if (currentX > maxLeft) {
         container.style.left = `${maxLeft}px`;
     }
 
-    if (currentLeft < maxRight) {
+    if (currentX < maxRight) {
         container.style.left = `${maxRight}px`;
     }
 };
